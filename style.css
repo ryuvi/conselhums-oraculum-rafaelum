@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap");
+
+:root {
+	--background: #282a36;
+	--foreground: #f8f8f2;
+	--background-two: #44475a;
+	--backgroud-three: #6272a4;
+}
+
+* {
+	box-sizing: border-box;
+	/*color: var(--foreground);*/
+	font-family: "Raleway", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--background);
+	height: 100vh;
+}
+
+/*header {
+	align-items: center;
+	display: flex;
+	font-size: 1.5em;
+	justify-content: center;
+	padding: 1.5em 0;
+	text-transform: uppercase;
+}*/
+
+main {
+	align-items: center;
+	display: flex;
+	font-size: 1.25em;
+	height: 100vh;
+	justify-content: center;
+	padding: 0 2em;
+}
+
+main .box {
+	background-color: var(--background-two);
+	border-radius: 15px;
+	margin: 5em 0;
+	padding: 1em;
+}
+
+main .box .title {
+	color: #ff79c6;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	text-decoration: underline;
+}
+
+main .box .content {
+	border: 1px solid #6272a4;
+	color: #f8f8f2;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	line-height: 1.25;
+	padding: 1em;
+}
+
+main .box .card {
+	align-items: center;
+	color: #bd93f9;
+	font-weight: 700;
+	justify-content: center;
+	letter-spacing: 0.15em;
+	margin: 0.5em auto 0;
+	text-align: center;
+	text-transform: uppercase;
+}

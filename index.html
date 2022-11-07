@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Oraculo Rafael</title>
+	</head>
+	<body>
+		<main>
+			<div class="box" id="wise_one">
+				<div class="title"><h2>Conselho #1</h2></div>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ac turpis egestas sed tempus urna et
+						pharetra. Diam sollicitudin tempor id eu nisl nunc mi.
+						Et malesuada fames ac turpis egestas maecenas pharetra.
+						Sagittis orci a scelerisque purus semper eget. Sed
+						euismod nisi porta lorem. Senectus et netus et malesuada
+						fames. Ipsum nunc aliquet bibendum enim facilisis
+						gravida neque convallis. Velit dignissim sodales ut eu
+						sem. Sit amet commodo nulla facilisi nullam vehicula.
+						Nam aliquam sem et tortor consequat id. Sit amet
+						volutpat consequat mauris nunc congue nisi. Dignissim
+						convallis aenean et tortor at risus. Fermentum leo vel
+						orci porta non pulvinar. Lectus quam id leo in vitae.
+						Nullam vehicula ipsum a arcu cursus vitae congue mauris.
+						Risus pretium quam vulputate dignissim suspendisse in.
+						Viverra vitae congue eu consequat ac felis donec et.
+						Massa id neque aliquam vestibulum morbi blandit cursus.
+						Pellentesque diam volutpat commodo sed egestas egestas
+						fringilla phasellus faucibus.
+					</p>
+				</div>
+				<div class="card">
+					<small>Carta X</small>
+				</div>
+			</div>
+			<div class="box" id="wise_two">
+				<div class="title"><h2>Conselho #1</h2></div>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ac turpis egestas sed tempus urna et
+						pharetra. Diam sollicitudin tempor id eu nisl nunc mi.
+						Et malesuada fames ac turpis egestas maecenas pharetra.
+						Sagittis orci a scelerisque purus semper eget. Sed
+						euismod nisi porta lorem. Senectus et netus et malesuada
+						fames. Ipsum nunc aliquet bibendum enim facilisis
+						gravida neque convallis. Velit dignissim sodales ut eu
+						sem. Sit amet commodo nulla facilisi nullam vehicula.
+						Nam aliquam sem et tortor consequat id. Sit amet
+						volutpat consequat mauris nunc congue nisi. Dignissim
+						convallis aenean et tortor at risus. Fermentum leo vel
+						orci porta non pulvinar. Lectus quam id leo in vitae.
+						Nullam vehicula ipsum a arcu cursus vitae congue mauris.
+						Risus pretium quam vulputate dignissim suspendisse in.
+						Viverra vitae congue eu consequat ac felis donec et.
+						Massa id neque aliquam vestibulum morbi blandit cursus.
+						Pellentesque diam volutpat commodo sed egestas egestas
+						fringilla phasellus faucibus.
+					</p>
+					<small>Carta X</small>
+				</div>
+			</div>
+			<div class="box" id="wise_three">
+				<div class="title"><h2>Conselho #1</h2></div>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ac turpis egestas sed tempus urna et
+						pharetra. Diam sollicitudin tempor id eu nisl nunc mi.
+						Et malesuada fames ac turpis egestas maecenas pharetra.
+						Sagittis orci a scelerisque purus semper eget. Sed
+						euismod nisi porta lorem. Senectus et netus et malesuada
+						fames. Ipsum nunc aliquet bibendum enim facilisis
+						gravida neque convallis. Velit dignissim sodales ut eu
+						sem. Sit amet commodo nulla facilisi nullam vehicula.
+						Nam aliquam sem et tortor consequat id. Sit amet
+						volutpat consequat mauris nunc congue nisi. Dignissim
+						convallis aenean et tortor at risus. Fermentum leo vel
+						orci porta non pulvinar. Lectus quam id leo in vitae.
+						Nullam vehicula ipsum a arcu cursus vitae congue mauris.
+						Risus pretium quam vulputate dignissim suspendisse in.
+						Viverra vitae congue eu consequat ac felis donec et.
+						Massa id neque aliquam vestibulum morbi blandit cursus.
+						Pellentesque diam volutpat commodo sed egestas egestas
+						fringilla phasellus faucibus.
+					</p>
+					<small>Carta X</small>
+				</div>
+			</div>
+		</main>
+		<script>
+			const query = window.location.search;
+			console.log(query.replace("?", ""));
+			let wise_one = document.getElementById("wise_one");
+			let wise_two = document.getElementById("wise_two");
+			let wise_three = document.getElementById("wise_three");
+			let blur = "blur(5px)";
+			let cursor = "not-allowed";
+			let display = "none";
+
+			if (query.replace("?", "") == "one") {
+				wise_two.style.filter = blur;
+				wise_two.style.cursor = cursor;
+				wise_two.style.display = display;
+				wise_three.style.filter = blur;
+				wise_three.style.cursor = cursor;
+				wise_three.style.display = display;
+			} else if (query.replace("?", "") == "two") {
+				wise_one.style.filter = blur;
+				wise_one.style.cursor = cursor;
+				wise_one.style.display = display;
+				wise_three.style.filter = blur;
+				wise_three.style.cursor = cursor;
+				wise_three.style.display = display;
+			} else if (query.replace("?", "") == "three") {
+				wise_one.style.filter = blur;
+				wise_one.style.cursor = cursor;
+				wise_one.style.display = display;
+				wise_two.style.filter = blur;
+				wise_two.style.cursor = cursor;
+				wise_two.style.display = display;
+			}
+		</script>
+	</body>
+</html>
