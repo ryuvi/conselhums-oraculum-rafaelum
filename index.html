@@ -10,82 +10,134 @@
 		<title>Oraculo Rafael</title>
 	</head>
 	<body>
-		<main>
+		<section id="buttons">
+			<p class="description">
+				Aqui está pequenos conselhos para seu dia, tirados a partir de
+				cartas do tarot. <br /><br />Lembre-se: Tenha sempre fé na sua
+				vida, pois ela é única e de sua autonomia.
+			</p>
+			<hr />
+			<button class="btn-box" onclick="open_wise(1)">
+				<h1 class="btn-title">Conselho #1</h1>
+			</button>
+			<button class="btn-box" onclick="open_wise(2)">
+				<h1 class="btn-title">Conselho #2</h1>
+			</button>
+			<button class="btn-box" onclick="open_wise(3)">
+				<h1 class="btn-title">Conselho #3</h1>
+			</button>
+		</section>
+		<main id="wise" style="display: none">
 			<div class="box" id="wise_one">
 				<div class="title"><h2>Conselho #1</h2></div>
 				<div class="content">
 					<p>
-						Para o dia de hoje, você pode estar passado por uma fase de novos ares, novos ciclos, que apesar de serem momentos bons
-                        tem sido dificultoso vive-los, pois há uma falta de harmonia entre as pessoas ao seu redor. Mas tenha em mente que a vida
-                        é feita de momentos, e a maioria deles são curtos e breves, então mantenha a fé e só se preocupe com aquilo que da pra
-                        ser resolvido na hora, pois assim você terá energia suficiente para passar por tudo isso e conquistar aquilo que lhe faz feliz.
-                    </p>
+						Para o dia de hoje, você pode estar passado por uma fase
+						de novos ares, novos ciclos, que apesar de serem
+						momentos bons tem sido dificultoso vive-los, pois há uma
+						falta de harmonia entre as pessoas ao seu redor. Mas
+						tenha em mente que a vida é feita de momentos, e a
+						maioria deles são curtos e breves, então mantenha a fé e
+						só se preocupe com aquilo que da pra ser resolvido na
+						hora, pois assim você terá energia suficiente para
+						passar por tudo isso e conquistar aquilo que lhe faz
+						feliz.
+					</p>
 				</div>
 				<!--<div class="card">
 					<small>Valete de Copas; Nove de Espadas; O Mago</small>
                 </div>-->
+				<button class="btn-box" onclick="goback()">
+					<h1 class="btn-title">Voltar</h1>
+				</button>
 			</div>
 			<div class="box" id="wise_two">
 				<div class="title"><h2>Conselho #2</h2></div>
 				<div class="content">
 					<p>
-						Para o dia de hoje, pode ter aparecido diversos obstaculos em sua vida e isso pode ter provocado um desanimo ou uma falta
-                        de vontade de continuar tentando alcançar aquilo que lhe faz feliz, mas não desanime pois isso é uma fase, tudo vai passar,
-                        aquilo que você deseja será conquistado, se precisar, de uma parada, olha tudo ao seu redor, tente ver o que está te
-                        atrapalhando, tente enxergar novos horizontes para seguir, as vezes precisamos procurar por novos caminhos para chegar no
-                        lugar que queremos.
+						Para o dia de hoje, pode ter aparecido diversos
+						obstaculos em sua vida e isso pode ter provocado um
+						desanimo ou uma falta de vontade de continuar tentando
+						alcançar aquilo que lhe faz feliz, mas não desanime pois
+						isso é uma fase, tudo vai passar, aquilo que você deseja
+						será conquistado, se precisar, de uma parada, olha tudo
+						ao seu redor, tente ver o que está te atrapalhando,
+						tente enxergar novos horizontes para seguir, as vezes
+						precisamos procurar por novos caminhos para chegar no
+						lugar que queremos.
 					</p>
-                    <!--<div class="card">
+					<!--<div class="card">
     					<small>Rainha de Ouros; Dois de Espadas; Nove de Ouros</small>
                     </div>-->
-                </div>
+				</div>
 			</div>
 			<div class="box" id="wise_three">
 				<div class="title"><h2>Conselho #3</h2></div>
 				<div class="content">
 					<p>
-						Para o dia de hoje, apesar de você ter uma imaginação muito grande e isso as vezes afetar o que realmente pode ser feito,
-                        você tem uma força de vontade muito grande e isso tem feito com que tudo caminhe de forma positiva, basta você voltar seus
-                        pensamentos para aquilo que é real, que você conseguirá chegar longe, porque existe uma força e uma perseverança muito grande,
-                        que impede que você desista daquilo que você quer.
+						Para o dia de hoje, apesar de você ter uma imaginação
+						muito grande e isso as vezes afetar o que realmente pode
+						ser feito, você tem uma força de vontade muito grande e
+						isso tem feito com que tudo caminhe de forma positiva,
+						basta você voltar seus pensamentos para aquilo que é
+						real, que você conseguirá chegar longe, porque existe
+						uma força e uma perseverança muito grande, que impede
+						que você desista daquilo que você quer.
 					</p>
-                    <!--<div class="card">
+					<!--<div class="card">
     					<small>Três de Paus; Cavaleiro de Copas; Seis de Espadas</small>
                     </div>-->
 				</div>
 			</div>
 		</main>
+		<footer>
+			<small>
+				Cores por
+				<a href="https://www.draculatheme.com">Dracula Theme</a>
+			</small>
+		</footer>
 		<script>
-			const query = window.location.search;
-			console.log(query.replace("?", ""));
-			let wise_one = document.getElementById("wise_one");
-			let wise_two = document.getElementById("wise_two");
-			let wise_three = document.getElementById("wise_three");
 			let blur = "blur(5px)";
 			let cursor = "not-allowed";
 			let display = "none";
 
-			if (query.replace("?", "") == "one") {
-				wise_two.style.filter = blur;
-				wise_two.style.cursor = cursor;
-				wise_two.style.display = display;
-				wise_three.style.filter = blur;
-				wise_three.style.cursor = cursor;
-				wise_three.style.display = display;
-			} else if (query.replace("?", "") == "two") {
-				wise_one.style.filter = blur;
-				wise_one.style.cursor = cursor;
-				wise_one.style.display = display;
-				wise_three.style.filter = blur;
-				wise_three.style.cursor = cursor;
-				wise_three.style.display = display;
-			} else if (query.replace("?", "") == "three") {
-				wise_one.style.filter = blur;
-				wise_one.style.cursor = cursor;
-				wise_one.style.display = display;
-				wise_two.style.filter = blur;
-				wise_two.style.cursor = cursor;
-				wise_two.style.display = display;
+			function open_wise(number) {
+				let btns = document.getElementById("buttons");
+				btns.style.display = "none";
+				let wise = document.getElementById("wise");
+				wise.style.display = "";
+				let wise_one = document.getElementById("wise_one");
+				let wise_two = document.getElementById("wise_two");
+				let wise_three = document.getElementById("wise_three");
+				switch (number) {
+					case 1:
+						wise_one.style.display = "";
+						wise_two.style.display = "none";
+						wise_three.style.display = "none";
+						break;
+					case 2:
+						wise_one.style.display = "none";
+						wise_two.style.display = "";
+						wise_three.style.display = "none";
+						break;
+					case 3:
+						wise_one.style.display = "none";
+						wise_two.style.display = "none";
+						wise_three.style.display = "";
+						break;
+				}
+			}
+			function goback() {
+				let btns = document.getElementById("buttons");
+				btns.style.display = "";
+				let wise = document.getElementById("wise");
+				wise.style.display = "none";
+				let wise_one = document.getElementById("wise_one");
+				let wise_two = document.getElementById("wise_two");
+				let wise_three = document.getElementById("wise_three");
+				wise_one.style.display = "none";
+				wise_two.style.display = "none";
+				wise_three.style.display = "none";
 			}
 		</script>
 	</body>
