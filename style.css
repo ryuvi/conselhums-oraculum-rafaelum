@@ -74,17 +74,19 @@ main .btn-box {
 	align-items: center;
 	justify-content: center;
 	font-size: 10pt;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .btn-box .btn-title {
 	border: 3px solid #ff79c6;
 	background-color: transparent;
 	padding: 1em 2.5em;
+    transition: border 0.5s;
 }
 
 .btn-box .btn-title:active,
 .btn-box .btn-title:hover {
-	border: 2.5px solid #282a36;
+	border: 3px solid #282a36;
 }
 
 .btn-box:active,
